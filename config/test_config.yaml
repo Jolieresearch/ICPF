@@ -1,0 +1,50 @@
+TEST:
+  DEVICE: "cuda:0"
+  METRIC: ['nMSE','SRC','MAE']
+  DATASET: "MICROLENS"
+  SEED: 2024
+  BATCH_SIZE: 256
+  MAX_EPOCH: 30
+  EARLY_STOP_TURNS: 5
+  SAVE_FOLDER: "test_results"
+
+MODEL:
+  MODEL_ID: "ICPF"
+  FEATURE_NUM: 2
+  FEATURE_DIM: 768
+  ALPHA: 0
+  LABEL_DIM: 1
+  NUM_OF_RETRIEVED: 14
+  TRAINED_MODEL_PATH: ""
+
+VIT:
+  PATH: "clip-vit-base-patch32"
+
+ANGLE:
+  PATH: "angle-bert-base-uncased-nli-en-v1"
+
+
+PROMPT:
+  NN_LENGTH: 0
+  RE_LENGTH: 8
+
+OPTIM:
+  NAME: "AdamW"
+  LR: 0.0001
+
+DATASET:
+  MICROLENS:
+    DATASET_ID: "microlens"
+    FRAME_NUM: 10
+    PATH: "datasets/microlens/data" #The path of the processed dataset file(.pkl).
+    FRAMES_PATH: "datasets/microlens/video_frames"
+  TIKTOK:
+    DATASET_ID: "tiktok"
+    FRAME_NUM: 10
+    PATH: "datasets/tiktok/data" #The path of the processed dataset file(.pkl).
+    FRAMES_PATH: "datasets/tiktok/video_frames"
+  NUS:
+    DATASET_ID: "nus"
+    FRAME_NUM: 4
+    PATH: "datasets/nus/data" #The path of the processed dataset file(.pkl).
+    FRAMES_PATH: "datasets/nus/video_frames"
