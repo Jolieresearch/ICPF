@@ -1,3 +1,6 @@
+# ICPF: In-Context Prompt-augmented Framework [AAAI2025]
+
+> Official github repository for **In-context Prompt-augmented Micro-video Popularity Prediction**.
 
 ## 🛠️ Environment
 * Python >= 3.10
