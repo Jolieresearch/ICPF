@@ -16,8 +16,6 @@ For example, to **train** ICPF with one 3090 GPU.
 * Then you can run
 
 ```bash 
-python train.py --seed=2024 --batch_size=64 --early_stop_turns=5 --split=100 --retrieved_num=14 \ 
-    --dataset_id="microlens" --dataset="MICROLENS" --device="cuda:0" --prompt_nn_length=0 --prompt_re_length=8 \
-    --save="train_results"
+python train.py --batch_size=64 --early_stop_turns=5 --dataset_id="microlens" --dataset="MICROLENS"
 ```
 * When the training is completed, the inference results will be obtained.
