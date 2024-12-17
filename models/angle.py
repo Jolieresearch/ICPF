@@ -108,7 +108,6 @@ class AnglEModel_ICPF(torch.nn.Module):
 
             retrieved_text_embeddings = torch.stack(retrieved_text_embeddings)
             retrieved_text_embeddings = torch.reshape(retrieved_text_embeddings, (target_text_embeddings.size(0), self.retrieved_num, 512, 768))
-            retrieved_text_embeddings = torch.mean(retrieved_text_embeddings, dim=1).squeeze(1)
 
 
         text_prompt = self.prompt_layer(target_text_embeddings, retrieved_text_embeddings)
