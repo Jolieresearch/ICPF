@@ -28,19 +28,6 @@ class VitModel_ICPF(torch.nn.Module):
         self.post_layernorm = vit_model.vision_model.post_layernorm
 
         vit_encoder_layer = self.encoder_layers.to(device)
-        self.encoder_vit_layer0 = vit_encoder_layer[0]
-        self.encoder_vit_layer1 = vit_encoder_layer[1]
-        self.encoder_vit_layer2 = vit_encoder_layer[2]
-        self.encoder_vit_layer3 = vit_encoder_layer[3]
-        self.encoder_vit_layer4 = vit_encoder_layer[4]
-        self.encoder_vit_layer5 = vit_encoder_layer[5]
-        self.encoder_vit_layer6 = vit_encoder_layer[6]
-        self.encoder_vit_layer7 = vit_encoder_layer[7]
-        self.encoder_vit_layer8 = vit_encoder_layer[8]
-        self.encoder_vit_layer9 = vit_encoder_layer[9]
-        self.encoder_vit_layer10 = vit_encoder_layer[10]
-        self.encoder_vit_layer11 = vit_encoder_layer[11]
-
         self.prompt = Video_Prompt_Generator(prompt_re_length, device=self.device)
 
         self.freeze(self.embeddings)
