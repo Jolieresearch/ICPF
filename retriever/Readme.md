@@ -21,3 +21,5 @@ Then run the **extract_features.py** to extract the video frames and text featur
 ### Retrieval Preprocess
 
 Run the **retriever.py** to do retrieval process.
+
+Then stack the relevant instances.
